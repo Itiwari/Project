@@ -1,4 +1,4 @@
-spool C:\Users\itiwari\Desktop\Project\PKS_FILE_1.pks
+spool C:\Users\itiwari\Desktop\Project\PKS_FILE_1.txt
 CREATE OR REPLACE PACKAGE dsp AUTHID CURRENT_USER AS
 
 -- Set up test directory object.
