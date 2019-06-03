@@ -1,3 +1,4 @@
+spool C:\Users\itiwari\Desktop\Project\dblink.txt
 create or replace package body pack as
 
 procedure test(inId number)
@@ -12,3 +13,5 @@ end;
 
 
 end;
+					 /
+					 spool off;
