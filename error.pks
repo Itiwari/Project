@@ -1,4 +1,4 @@
-spool C:\Users\itiwari\Desktop\Project\error.pks
+spool C:\Users\itiwari\Desktop\Project\error.txt
 create or replace package show_errors
 is
 
