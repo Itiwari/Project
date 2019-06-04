@@ -1,3 +1,4 @@
+spool C:\Users\itiwari\Desktop\Project\LOOP.txt
 create or replace package body pipe_row_test as
 
 function fun return t_tab pipelined
@@ -23,3 +24,4 @@ begin
 end;
 
 end;
+spool off;
