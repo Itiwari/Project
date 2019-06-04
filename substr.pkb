@@ -1,3 +1,4 @@
+spool C:\Users\itiwari\Desktop\Project\substr.txt
 create or replace package body testPack as
 
 function blob_to_clob (blob_in in blob) return clob
@@ -8,3 +9,4 @@ begin
 end blob_to_clob;
 
 end testPack;
+spool off;
