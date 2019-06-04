@@ -1,4 +1,4 @@
-C:\Users\itiwari\Desktop\Project\pragma.txt
+spool C:\Users\itiwari\Desktop\Project\pragma.txt
 create or replace package pragma_exception_init
 is
 
