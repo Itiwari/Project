@@ -1,3 +1,4 @@
+C:\Users\itiwari\Desktop\Project\pragma.txt
 create or replace package pragma_exception_init
 is
 
@@ -6,3 +7,4 @@ is
 
 end pragma_exception_init;
 /
+spool off;
