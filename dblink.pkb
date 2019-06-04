@@ -13,5 +13,4 @@ end;
 
 
 end;
-					 /
-					 spool off;
+ spool off;
