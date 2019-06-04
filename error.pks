@@ -1,3 +1,4 @@
+spool C:\Users\itiwari\Desktop\Project\error.pks
 create or replace package show_errors
 is
 
@@ -17,3 +18,4 @@ end show_errors;
 /
 
 show err
+spool off;
