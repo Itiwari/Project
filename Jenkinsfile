@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
 	stage('Building SQL files->PKS files->PKB files') {
-	node {
+	steps {
 		// Checkout
   checkout scm
 
