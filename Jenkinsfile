@@ -9,7 +9,6 @@ pipeline {
     dir("C:/Users/itiwari/Documents/SQL_Bucket")
     {
       sh ''' #!/bin/bash
-        	# now log into the database 
 		    for file in *; do
        		p="$(basename "$file")";
        		$(printf "@$p"|sqlplus system/Rajneeti007@$sid>>SQLLOG)  
@@ -25,7 +24,6 @@ pipeline {
             dir("C:/Users/itiwari/Documents/PKS_Bucket")
 		            {
                 sh ''' #!/bin/bash
-		            # now log into the database 
 		            for file in *; do
 			        q="$(basename "$file")";
   			        $(printf "@$q"|sqlplus system/Rajneeti007@$sid>>SQLLOG)  
@@ -43,7 +41,6 @@ pipeline {
                 dir("C:/Users/itiwari/Documents/PKB_Bucket")
                 {
                 sh '''#!/bin/bash
-		        # now log into the database 
 		        for file in *; do
 			    r="$(basename "$file")";
   			    $(printf "@$r"|sqlplus system/Rajneeti007@$sid>>SQLLOG)  
