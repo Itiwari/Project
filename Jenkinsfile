@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
 	stage('Building SQL files->PKS files->PKB files') {
-	steps {
+	node {
 		notifyStarted()
 	         //bat label: '', script: 'echo "Hello world"';
 		      //bat script: 'echo Hello Ishita';
