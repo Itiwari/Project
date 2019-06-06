@@ -11,11 +11,7 @@ pipeline {
 		      //bat script: 'dir';
 		      bat script: 'sh C:/Users/itiwari/Documents/All_In_One.sh';
 		notifySuccessful()
-		}catch (e) {
-    currentBuild.result = "FAILED"
-    notifyFailed()
-    throw e
-  }
+		}
 	}   
        
     }
@@ -89,4 +85,4 @@ Check console output at "${env.JOB_NAME} [${env.BUILD_NUMBER}]"
 """,
       recipientProviders: [[$class: 'DevelopersRecipientProvider']]
     )
-}
+} 
