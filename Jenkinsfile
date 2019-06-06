@@ -5,7 +5,7 @@ pipeline {
     stages {
 	    stage('Putting files in separate buckets'){
 		    steps{
-			 dir("C:/Program Files (x86)/Jenkins/workspace/Sample_Query")
+			 dir("C:/Program Files (x86)/Jenkins/workspace/Tuesday_Test4")
 			    {
 				sh ''' #!/bin/bash
 				for file in *;
