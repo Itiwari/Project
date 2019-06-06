@@ -1,38 +1,17 @@
 pipeline {
-
     agent any
- 
     stages {
-	    
-	stage('Building SQL files') {
+	stage('Building SQL files->PKS files->PKB files') {
 	steps {
-		    dir("C:/Users/itiwari/Documents/SQL_Bucket")
-		    {
-		      sh SQL.sh
-		    }
+	         //bat label: '', script: 'echo "Hello world"';
+		      //bat script: 'echo Hello Ishita';
+		      //bat script: 'cd C:/Users/itiwari/Documents/';
+		      //bat script: 'echo $pwd';
+		      //bat script: 'dir';
+		      bat script: 'sh C:/Users/itiwari/Documents/All_In_One.sh';
 		}
 	}   
-
-	stage('Building PKS files') {
-            steps {
-            dir("C:/Users/itiwari/Documents")
-		 {
-                	sh PKS.sh
-                }
-            }
- 
-       }
-  
-
-	  stage('Building PKB files') {
-            steps {
-                dir("C:/Users/itiwari/Documentst")
-                {
-                	sh PKB.sh
-                }
-            }
- 
-        } 
+       
     }
 
 }
