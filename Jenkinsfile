@@ -14,10 +14,10 @@ pipeline {
 	    stage ('Test')
 	    {
 		    steps {
-    try {
+    
         bat script: 'exit 1'
         currentBuild.result = 'SUCCESS'
-    } catch (any) {
+     catch (any) {
         currentBuild.result = 'FAILURE'
         throw any //rethrow exception to prevent the build from proceeding
     } finally {
