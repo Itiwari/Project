@@ -13,14 +13,7 @@ pipeline {
 	}   
        
     }
-	catch (err) {
-    currentBuild.result = "FAILED"
-    mail (to: 'tiwariishita090@gmail.com',
-         subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has FAILED",
-         body: "Please go to ${env.BUILD_URL} for more details. ");
-
-    throw err
-}
+	
 }
 
 /* post {
