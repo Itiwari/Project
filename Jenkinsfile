@@ -13,8 +13,17 @@ pipeline {
 	}   
        
     }
+	catch (err) {
+    currentBuild.result = "FAILED"
+    mail (to: 'tiwariishita090@gmail.com',
+         subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has FAILED",
+         body: "Please go to ${env.BUILD_URL} for more details. ");
 
-post {
+    throw err
+}
+}
+
+/* post {
         always {
             bat script: 'echo "This will always run"'
 	//mail bcc: '', body: "<b>Example</b><br>\n\<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "tiwariishita090@gmail.com";
@@ -36,4 +45,4 @@ post {
             bash script: 'echo "For example, if the Pipeline was previously failing but is now successful"'
         }
     }
-}
+} */
