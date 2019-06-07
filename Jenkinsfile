@@ -10,7 +10,19 @@ pipeline {
 		      //bat script: 'dir';
 		      bat script: 'sh C:/Users/itiwari/Documents/All_In_One.sh';
 		}
-	}   
+	} 
+	    stage 'Test'
+node {
+    try {
+        bat script: 'exit 1'
+        currentBuild.result = 'SUCCESS'
+    } catch (any) {
+        currentBuild.result = 'FAILURE'
+        throw any //rethrow exception to prevent the build from proceeding
+    } finally {
+        step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'tiwariishita090@gmail.com', sendToIndividuals: true])
+    }
+}
        
     }
 	
