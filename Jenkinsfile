@@ -11,8 +11,9 @@ pipeline {
 		      bat script: 'sh C:/Users/itiwari/Documents/All_In_One.sh';
 		}
 	} 
-	    stage 'Test'
-node {
+	    stage ('Test')
+	    {
+		    steps {
     try {
         bat script: 'exit 1'
         currentBuild.result = 'SUCCESS'
@@ -22,7 +23,8 @@ node {
     } finally {
         step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'tiwariishita090@gmail.com', sendToIndividuals: true])
     }
-}
+    }
+    }
        
     }
 	
