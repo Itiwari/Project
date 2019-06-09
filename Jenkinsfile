@@ -3,6 +3,8 @@ pipeline {
     environment {
         //This variable need be tested as string
         doError = '0'
+       // alpha = '0'
+        //Path = 'C:/Users/itiwari/Documents'
        
     }
     stages {
@@ -23,9 +25,20 @@ pipeline {
 	} 
 	stage('Executing .sh files') {
     	steps {
-		      bat script: 'sh C:/Users/itiwari/Documents/SampleSh.sh';
+		     bat script: 'sh C:/Users/itiwari/Documents/SampleSh.sh';
 		}
 	} 
+	/*
+	stage('Executing Jar file')
+	{
+	    steps {
+	      bat script: "java -jar C:/Users/itiwari/Documents/ABC/hello.jar testing654 n1-standard-8"
+	       alpha ='1';
+	        bat script: 'java -jar C:/Users/itiwari/Documents/ABC/hello.jar';
+	    
+	    }
+	} */
+	
         
         stage('Success') {
             when {
